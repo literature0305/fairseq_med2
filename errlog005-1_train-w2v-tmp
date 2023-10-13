@@ -1,0 +1,18 @@
+/root/anaconda3/lib/python3.9/site-packages/torch/cuda/__init__.py:546: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+DEBUG:hydra.core.utils:Setting JobRuntime:name=UNKNOWN_NAME
+DEBUG:hydra.core.utils:Setting JobRuntime:name=hydra_train
+Traceback (most recent call last):
+  File "/home/Workspace/fairseq/fairseq_cli/hydra_train.py", line 27, in hydra_main
+    _hydra_main(cfg)
+  File "/home/Workspace/fairseq/fairseq_cli/hydra_train.py", line 56, in _hydra_main
+    distributed_utils.call_main(cfg, pre_main, **kwargs)
+  File "/home/Workspace/fairseq/fairseq/distributed/utils.py", line 370, in call_main
+    infer_init_method(cfg.distributed_training)
+  File "/home/Workspace/fairseq/fairseq/distributed/utils.py", line 66, in infer_init_method
+    _infer_single_node_init(cfg)
+  File "/home/Workspace/fairseq/fairseq/distributed/utils.py", line 159, in _infer_single_node_init
+    assert (
+AssertionError: world size is 4 but have 0 available devices
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
